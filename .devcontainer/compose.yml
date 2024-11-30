@@ -10,23 +10,14 @@ services:
       MAILER_DSN: "smtp://mailer:1025"
       
   database:
-    image: mysql:8.0
-    restart: always
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql-data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: passw0rd
+    extends:
+      file: ../docker-compose.yml
+      service: database
 
   mailer:
-    image: axllent/mailpit
-    ports:
-      - "1025:1025"
-      - "8025:8025"
-    environment:
-      MP_SMTP_AUTH_ACCEPT_ANY: 1
-      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+    extends:
+      file: ../docker-compose.yml
+      service: mailer
 
 volumes:
   mysql-data:
