@@ -9,7 +9,8 @@ services:
       - mysql-data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: app
-      MYSQL_USER: root
+      MYSQL_USER: app
+      MYSQL_PASSWORD: passw0rd
       MYSQL_ROOT_PASSWORD: passw0rd
 
   mailer:
