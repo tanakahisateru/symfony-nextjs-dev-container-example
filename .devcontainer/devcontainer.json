@@ -18,7 +18,9 @@
         "vscode": {
             "extensions": [
                 "mtxr.sqltools",
-                "mtxr.sqltools-driver-mysql"
+                "mtxr.sqltools-driver-mysql",
+                "bmewburn.vscode-intelephense-client",
+                "ms-vscode.vscode-typescript-next"
             ]
         },
         "jetbrains" : {
