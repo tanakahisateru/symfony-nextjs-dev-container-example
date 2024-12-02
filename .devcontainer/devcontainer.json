@@ -21,7 +21,26 @@
                 "mtxr.sqltools-driver-mysql",
                 "bmewburn.vscode-intelephense-client",
                 "ms-vscode.vscode-typescript-next"
-            ]
+            ],
+            "settings": {
+                "sqltools.connections": [
+                    {
+                        "mysqlOptions": {
+                            "authProtocol": "default",
+                            "enableSsl": "Disabled"
+                        },
+                        "previewLimit": 50,
+                        "server": "database",
+                        "port": 3306,
+                        "driver": "MySQL",
+                        "name": "devcon",
+                        "database": "app",
+                        "username": "root",
+                        "password": "passw0rd"
+                    }
+                ],
+                "sqltools.autoOpenSessionFiles": false
+            }
         },
         "jetbrains" : {
             "backend" : "PhpStorm"
